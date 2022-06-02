@@ -2,6 +2,8 @@ package com.example.academiapw3.domain;
 
 import javax.persistence.*;
 
+@Table
+@Entity
 public class ExercicioTreino {
     @Id
     @Column
