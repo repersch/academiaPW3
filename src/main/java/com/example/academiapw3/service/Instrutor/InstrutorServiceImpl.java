@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class InstrutorServiceImpl implements InstrutorService {
@@ -31,6 +32,11 @@ public class InstrutorServiceImpl implements InstrutorService {
     @Deprecated
     public Instrutor buscarPorId(Integer id) {
         return instrutorDAO.getById(id);
+    }
+
+    @Override
+    public Optional<Instrutor> buscarPorEmail(String email) {
+        return instrutorDAO.findByEmail(email);
     }
 
     @Override
