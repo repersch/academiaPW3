@@ -25,7 +25,7 @@ public class ExercicioController {
     @PostMapping("/salvar")
     public String salvar(Exercicio exercicio, RedirectAttributes attr){
         service.salvar(exercicio);
-        attr.addFlashAttribute("success","Exercicio inserida com sucesso!");
+        attr.addFlashAttribute("success","Exercicio inserido com sucesso!");
         return "redirect:/exercicios/listar";
     }
 
