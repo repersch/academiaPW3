@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://thymeleaf.org"
+      xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
 <head>
 
@@ -21,7 +21,7 @@
                 </ul>
             </div>
 
-            <a class="btn btn-primary btn-md" href="/instrutores/cadastrar" role="button">
+            <a class="btn btn-primary btn-md" th:href="@{/instrutores/cadastrar}" role="button">
                 <span class="oi oi-plus" title="Cadastro" aria-hidden="true"></span>
                 <span>Cadastrar novo instrutor</span>
             </a>
@@ -29,7 +29,7 @@
         </nav>
     </div>
 
-    <div class="container" id="listagem">
+    <div class="container" id="lista_ficha_treino">
         <div th:replace="fragments/alert"></div>
         <div class="table-responsive">
             <table class="table table-striped table-hover table-sm">

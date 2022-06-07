@@ -12,6 +12,7 @@ public class FichaTreinoServiceImpl implements FichaTreinoService {
     @Autowired
     private FichaTreinoDAO fichaTreinoDAO;
 
+
     @Override
     public FichaTreino salvar(FichaTreino fichaTreino) {
         return fichaTreinoDAO.save(fichaTreino);

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:th="http://thymeleaf.org"
+	  xmlns:th="http://www.thymeleaf.org"
 	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 	<meta charset="UTF-8">
@@ -11,6 +11,35 @@
 		<li class="nav-item"><a class="nav-link" href="/"> <i
 				class="oi oi-home"></i> <span>Home</span>
 		</a></li>
+	</ul>
+
+	<ul class="nav nav-pills">
+		<li class="nav-item"><span class="nav-link active">Ficha de Treino</span></li>
+		<li class="nav-item">
+			<a class="nav-link" href="/fichasTreino/cadastrar">
+				<i class="oi oi-plus"></i> <span>Cadastrar</span>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/fichasTreino/listar">
+				<i class="oi oi-spreadsheet"></i> <span>Listar</span>
+			</a>
+		</li>
+	</ul>
+
+
+	<ul class="nav nav-pills">
+		<li class="nav-item"><span class="nav-link active" >Exercício</span></li>
+		<li class="nav-item">
+			<a class="nav-link" href="/x/cadastrar">
+				<i class="oi oi-plus"></i> <span>Cadastrar</span>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/x/listar">
+				<i class="oi oi-spreadsheet"></i><span>Listar</span>
+			</a>
+		</li>
 	</ul>
 
 	<ul class="nav nav-pills">
@@ -27,33 +56,6 @@
 		</li>
 	</ul>
 
-	<ul class="nav nav-pills">
-		<li class="nav-item"><span class="nav-link active" >Treino e Exercícios</span></li>
-		<li class="nav-item">
-			<a class="nav-link" href="/x/cadastrar">
-				<i class="oi oi-plus"></i> <span>Cadastrar</span>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="/x/listar">
-				<i class="oi oi-spreadsheet"></i><span>Listar</span>
-			</a>
-		</li>
-	</ul>
-
-	<ul class="nav nav-pills">
-		<li class="nav-item"><span class="nav-link active">Ficha do Treino</span></li>
-		<li class="nav-item">
-			<a class="nav-link" href="/fichasTreino/cadastrar">
-				<i class="oi oi-plus"></i> <span>Cadastrar</span>
-			</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="/fichasTreino/listar">
-				<i class="oi oi-spreadsheet"></i> <span>Listar</span>
-			</a>
-		</li>
-	</ul>
 </nav>
 
 </body>

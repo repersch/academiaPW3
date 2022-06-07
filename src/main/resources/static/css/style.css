@@ -8,7 +8,35 @@ html, body {
 body {
 	padding-top: 56px;
 	padding-left: 0;
-} 
+}
+
+.navbar {
+    height: 100px;
+}
+
+.page-header {
+    font-size: xxx-large;
+    margin-top: 100px;
+    margin-left: 60px;
+}
+
+#lista_ficha_treino {
+    margin-top: 100px;
+}
+
+.btn {
+    background-color: #e86465;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #e71717;
+}
+
+.btn-canto {
+    margin-left: 80%;
+}
+
 
 /*
  * main layout
@@ -36,6 +64,7 @@ body {
  * Sidebar
  */
 .sidebar {
+    margin-top: 50px;
     width: 0px;
     height: 100vh;
     border-top: 1px solid #eee;
@@ -63,7 +92,7 @@ body {
 } 
 
 .sidebar ul li:hover a, .menu ul li.active a{
-    color: #777777;
+    color: black;
 }
 
 .sidebar ul{
@@ -73,7 +102,7 @@ body {
 
 .sidebar ul li a{
     display: block;
-    color:#1a1a1a;
+    color: #e86465;
     padding: 10px 15px;
     white-space: nowrap;
 }
@@ -87,7 +116,7 @@ body {
  */
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
 	color: #fff;
-	background-color: #1e94d2;
+	background-color: #e86465;
 }
 
 /*
