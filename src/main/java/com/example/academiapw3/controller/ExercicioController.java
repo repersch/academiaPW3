@@ -34,7 +34,6 @@ public class ExercicioController {
 
     @GetMapping("/listar")
     public String listar(ModelMap modelMap){
-        System.out.println(service.buscarTodos());
         modelMap.addAttribute("exercicios", service.buscarTodos());
         return "exercicio/lista";
     }

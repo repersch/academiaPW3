@@ -5,12 +5,16 @@ import com.example.academiapw3.service.Instrutor.InstrutorServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 import java.util.Optional;
 
-@RestController
+@Controller
 @RequestMapping("/instrutores")
 public class InstrutorController {
     private final InstrutorServiceImpl instrutorService;
@@ -21,15 +25,36 @@ public class InstrutorController {
         this.encoder = encoder;
     }
 
+//    @GetMapping("/listar")
+//    public ResponseEntity<List<Instrutor>> listarInstrutores() {
+//        return ResponseEntity.ok(instrutorService.buscarTodos());
+//    }
+
     @GetMapping("/listar")
-    public ResponseEntity<List<Instrutor>> listarInstrutores() {
-        return ResponseEntity.ok(instrutorService.buscarTodos());
+    public String listarInstrutores(ModelMap modelMap) {
+        modelMap.addAttribute("instrutores", instrutorService.buscarTodos());
+        return "instrutor/lista";
     }
 
-    @PostMapping("/cadastrar")
-    public ResponseEntity<Instrutor> salvarInstrutor(@RequestBody Instrutor instrutor) {
+
+//    @PostMapping("/cadastrar")
+//    public ResponseEntity<Instrutor> salvarInstrutor(@RequestBody Instrutor instrutor) {
+//        instrutor.setSenha(encoder.encode(instrutor.getSenha()));
+//        return ResponseEntity.ok(instrutorService.salvar(instrutor));
+//    }
+
+    @GetMapping("/cadastrar")
+    public String cadastrar(Model model) {
+        model.addAttribute("instrutor", new Instrutor());
+        return "instrutor/cadastro";
+    }
+
+    @PostMapping("/salvar")
+    public String salvarInstrutor(Instrutor instrutor, RedirectAttributes attr) {
         instrutor.setSenha(encoder.encode(instrutor.getSenha()));
-        return ResponseEntity.ok(instrutorService.salvar(instrutor));
+        instrutorService.salvar(instrutor);
+        attr.addFlashAttribute("success","Instrutor salvo com sucesso!");
+        return "redirect:/instrutores/listar";
     }
 
     @GetMapping("validarSenha")
