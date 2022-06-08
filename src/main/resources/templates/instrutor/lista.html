@@ -12,7 +12,7 @@
     <div class="page-header">
         <span>Lista de instrutores</span>
     </div>
-    <a class="btn btn-primary btn-md" th:href="@{/instrutores/cadastrar}" role="button">
+    <a class="btn btn-primary btn-md" th:href="@{/instrutor/salvarInstrutor}" role="button">
         <span class="oi oi-plus" title="Cadastro" aria-hidden="true"></span>
         <span>Cadastrar novo instrutor</span>
     </a>
@@ -29,7 +29,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr  th:each="i : ${instrutores}">
+                <tr  th:each="i : ${instrutor}">
                     <td th:text="${i.id}"></td>
                     <td th:text="${i.nome}"></td>
                     <td th:text="${i.email}"></td>

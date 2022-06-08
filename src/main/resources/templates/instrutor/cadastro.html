@@ -21,7 +21,7 @@
                 </ul>
             </div>
 
-            <a class="btn btn-primary btn-md" href="/instrutores/listar" role="button">
+            <a class="btn btn-primary btn-md" href="/instrutor/listarInstrutores" role="button">
                 <span class="oi oi-spreadsheet" title="Lista" aria-hidden="true"></span>
                 <span>Listar instrutores</span>
             </a>
@@ -31,27 +31,28 @@
 
     <div class="container" id="cadastro">
         <div th:replace="fragments/alert"></div>
-        <form action="/instrutores/salvar" method="post">
+        <form th:action="@{/instrutor/salvarInstrutor}"
+              th:object="${instrutor}" method="post">
 
             <div class="form-row">
 
                 <div class="form-group col-md-6">
                     <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" class="form-control">
+                    <input type="text" name="nome" id="nome" class="form-control" th:field="*{nome}">
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="email">Email</label>
                     <input type="text" name="email" id="email" placeholder="exemplo@email.com"
-                           class="form-control">
+                           class="form-control" th:field="*{email}">
                 </div>
 
                 <div class="form-group col-md-6">
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha" class="form-control">
+                    <input type="password" name="senha" id="senha" class="form-control" th:field="*{senha}">
                 </div>
 
-                <input type="hidden" id="id" name="id"/>
+                <input type="hidden" id="id" name="id" th:field="*{id}"/>
                 <button type="submit" class="btn btn-primary btn-sm">Cadastrar</button>
             </div>
 
