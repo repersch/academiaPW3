@@ -3,19 +3,21 @@ package com.example.academiapw3.domain;
 import java.util.Arrays;
 
 public enum GrupoMuscular {
-    ABDOMEN ("Abdômen"),
-    ANTEBRACO ("Antebraço"),
-    BICEPS ("Bíceps"),
-    DELTOIDES ("Deltóide"),
-    OBLIQUOS ("Oblíquo"),
-    TIBIALIS ("Panturrilha"),
-    PEITORAL ("Peito"),
-    POSTERIOR ("Posterior"),
-    QUADRICEPS ("Quadríceps");
+    ABDOMEN ("ABDOMEN", "Abdômen"),
+    ANTEBRACO ("ANTEBRACO", "Antebraço"),
+    BICEPS ("BICEPS", "Bíceps"),
+    DELTOIDES ("DELTOIDES", "Deltóide"),
+    OBLIQUOS ("OBLIQUOS", "Oblíquo"),
+    TIBIALIS ("TIBIALIS", "Panturrilha"),
+    PEITORAL ("PEITORAL", "Peito"),
+    POSTERIOR ("POSTERIOR", "Posterior"),
+    QUADRICEPS ("QUADRICEPS", "Quadríceps");
 
     private String musculo;
+    private String sigla;
 
-    GrupoMuscular(String musculo) {
+    GrupoMuscular(String sigla, String musculo) {
+        this.sigla = sigla;
         this.musculo = musculo;
     }
 

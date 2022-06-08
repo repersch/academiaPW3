@@ -33,10 +33,10 @@
                 <tbody>
                 <tr th:each="f : ${fichasTreino}">
                     <td th:text="${f.id}"></td>
-                    <td th:date="${#temporals.format(f.dataInicio, 'dd/MM/yyyy')}"></td>
-                    <td th:date="${#temporals.format(f.validade, 'dd/MM/yyyy')}"></td>
+                    <td th:text="${#temporals.format(f.dataInicio, 'dd/MM/yyyy')}"></td>
+                    <td th:text="${#temporals.format(f.validade, 'dd/MM/yyyy')}"></td>
                     <td th:text="${f.aluno}"></td>
-                    <td th:instrutor="${f.instrutor.nome}"></td>
+                    <td th:instrutor="${f.instrutor}"></td>
                 </tr>
                 </tbody>
             </table>

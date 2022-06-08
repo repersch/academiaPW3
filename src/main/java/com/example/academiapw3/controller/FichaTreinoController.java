@@ -40,6 +40,7 @@ public class FichaTreinoController {
 
     @GetMapping("/listar")
     public String listar(ModelMap modelMap){
+        System.out.println(service.buscarTodos());
         modelMap.addAttribute("fichasTreino", service.buscarTodos());
         return "fichaTreino/lista";
     }

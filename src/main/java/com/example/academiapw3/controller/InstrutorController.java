@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/instrutor")
+@RequestMapping("/instrutores")
 public class InstrutorController {
     private final InstrutorServiceImpl instrutorService;
     private final PasswordEncoder encoder;
@@ -21,12 +21,12 @@ public class InstrutorController {
         this.encoder = encoder;
     }
 
-    @GetMapping("/listarInstrutores")
+    @GetMapping("/listar")
     public ResponseEntity<List<Instrutor>> listarInstrutores() {
         return ResponseEntity.ok(instrutorService.buscarTodos());
     }
 
-    @PostMapping("/salvarInstrutor")
+    @PostMapping("/cadastrar")
     public ResponseEntity<Instrutor> salvarInstrutor(@RequestBody Instrutor instrutor) {
         instrutor.setSenha(encoder.encode(instrutor.getSenha()));
         return ResponseEntity.ok(instrutorService.salvar(instrutor));

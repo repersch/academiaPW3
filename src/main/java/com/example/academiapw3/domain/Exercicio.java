@@ -20,8 +20,8 @@ public class Exercicio {
     @Column
     private String nome;
 
-    @Enumerated(EnumType.STRING)
-    private GrupoMuscular grupoMuscular;
+//    @Enumerated(EnumType.STRING)
+    private String grupoMuscular;
 
     @Column
     private String descricao;

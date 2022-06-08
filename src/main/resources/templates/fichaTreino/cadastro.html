@@ -28,33 +28,33 @@
                 <div class="form-group col-md-6">
                     <label for="valido">A ficha de treino é válida?</label>
                     <br>
-                    <input type="checkbox" id="valido" name="valido"
+                    <input type="checkbox" id="valido" name="valido" autofocus="autofocus"
                            th:field="*{valido}"
                            th:checked="${valido} ? 'checked'">
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label for="data_inicio">Data Inicio</label>
-                    <input type="date" class="form-control" id="data_inicio"
-                           th:field="*{dataInicio}" name="data_inicio"/>
+                    <label for="dataInicio">Data Inicio</label>
+                    <input type="date" class="form-control" id="dataInicio"
+                           th:field="*{dataInicio}" name="dataInicio"/>
                 </div><br>
 
                 <div class="form-group col-md-6">
-                    <label for="data_validade">Data de Validade</label>
-                    <input type="date" class="form-control" id="data_validade"
+                    <label for="validade">Data de Validade</label>
+                    <input type="date" class="form-control" id="validade"
                            name="data_validade" th:field="*{validade}" value=""/>
                 </div><br>
 
                 <div class="form-group col-md-6">
                     <label for="aluno">A ficha de treino pertence à qual aluno?</label>
-                    <input type="aluno" class="form-control" id="aluno"
-                           autofocus="autofocus" name="aluno" value="" th:field="*{aluno}"/>
+                    <input type="text" class="form-control" id="aluno"
+                           name="aluno" value="" th:field="*{aluno}"/>
                 </div><br>
 
                 <div class="form-group col-md-6">
                     <label for="instrutor">A ficha de treino pertence ao instrutor:</label>
                     <input type="text" class="form-control" id="instrutor"
-                           autofocus="autofocus" name="instrutor.nome" th:field="*{instrutor}"/>
+                           name="instrutor.nome" th:field="*{instrutor}"/>
                 </div><br>
 
                 <input type="hidden" id="id" th:field="*{id}"/>
