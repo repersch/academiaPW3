@@ -20,8 +20,10 @@ body {
     margin-left: 60px;
 }
 
-#lista_ficha_treino {
-    margin-top: 100px;
+#lista_ficha_treino, #lista_exercicio, #lista_instrutor, .form-row {
+    margin-top: 50px;
+    padding-right: 10%;
+    padding-left: 10%;
 }
 
 .btn {
@@ -34,7 +36,7 @@ body {
 }
 
 .btn-canto {
-    margin-left: 80%;
+    margin-left: 60%;
 }
 
 
