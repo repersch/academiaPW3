@@ -31,7 +31,7 @@
                     <input type="checkbox" id="valido" name="valido" autofocus="autofocus"
                            th:field="*{valido}"
                            th:checked="${valido} ? 'checked'">
-                </div>
+                </div><br>
 
                 <div class="form-group col-md-6">
                     <label for="dataInicio">Data Inicio</label>
@@ -46,15 +46,23 @@
                 </div><br>
 
                 <div class="form-group col-md-6">
-                    <label for="aluno">A ficha de treino pertence à qual aluno?</label>
+                    <label for="aluno">Aluno: </label>
                     <input type="text" class="form-control" id="aluno"
                            name="aluno" value="" th:field="*{aluno}"/>
                 </div><br>
 
+<!--                <div class="form-group col-md-6">-->
+<!--                    <label for="instrutor">Instrutor: </label>-->
+<!--                    <input type="text" class="form-control" id="instrutor"-->
+<!--                           name="instrutor.nome" th:field="*{instrutor}"/>-->
+<!--                </div><br>-->
+
                 <div class="form-group col-md-6">
-                    <label for="instrutor">A ficha de treino pertence ao instrutor:</label>
-                    <input type="text" class="form-control" id="instrutor"
-                           name="instrutor.nome" th:field="*{instrutor}"/>
+                    <label>Instrutor</label>
+                    <select class="form-control mr-sm-2" th:name="id" aria-label="Search" th:field="*{instrutor}">
+                            <option value="">Selecione</option>
+                            <option th:each="i : ${instrutores}" th:value="${i.id}" th:text="${i.nome}" name="instrutor"></option>
+                    </select>
                 </div><br>
 
                 <input type="hidden" id="id" th:field="*{id}"/>

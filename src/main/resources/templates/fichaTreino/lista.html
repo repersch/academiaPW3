@@ -36,7 +36,7 @@
                     <td th:text="${#temporals.format(f.dataInicio, 'dd/MM/yyyy')}"></td>
                     <td th:text="${#temporals.format(f.validade, 'dd/MM/yyyy')}"></td>
                     <td th:text="${f.aluno}"></td>
-                    <td th:instrutor="${f.instrutor}"></td>
+                    <td th:instrutor="${f.instrutor.nome}"></td>
                 </tr>
                 </tbody>
             </table>

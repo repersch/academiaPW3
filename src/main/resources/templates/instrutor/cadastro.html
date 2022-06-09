@@ -28,18 +28,18 @@
                 <div class="form-group col-md-6">
                     <label for="nome">Nome</label>
                     <input type="text" name="nome" id="nome" class="form-control" th:field="*{nome}">
-                </div>
+                </div><br>
 
                 <div class="form-group col-md-6">
                     <label for="email">Email</label>
                     <input type="text" name="email" id="email" placeholder="exemplo@email.com"
                            class="form-control" th:field="*{email}">
-                </div>
+                </div><br>
 
                 <div class="form-group col-md-6">
                     <label for="senha">Senha</label>
                     <input type="password" name="senha" id="senha" class="form-control" th:field="*{senha}">
-                </div>
+                </div><br>
 
                 <input type="hidden" id="id" name="id" th:field="*{id}"/>
                 <button type="submit" class="btn btn-primary btn-sm">Cadastrar</button>
